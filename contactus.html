@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"
+    name = "author" content = " Benedict Lee, Richard Truong, Nicholas Comeaux, Costel Vakiandro"
+    name = "viewport" content = "width=device-width", initial-scale="1.0">
+    <title>Contact Form</title>
+    <link href = "contactus.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <nav class="dropdown" style="margin:0; padding:0; overflow:hidden; background-color: purple;">
+    </nav>
+    <nav>
+        <ul>
+            <div class="container">
+                <button onclick="myFunction()" class="dropbutton" style="display:inline-block; padding:20px; background-color: purple;
+                color:white; font-size:24px; text-decoration: none; font-family:fantasy;">Reserve Now!</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="text" id="reservationHelp" placeholder="Search">
+                    <button type="button" id="locationIdentifier">Use My Location
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <a class="navbar-image" href="index.html"><img src="cybersage_transparent.png" alt="cybersagelogo"></a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="reservations.html">Reservation</a></li>
+        </ul>
+    </div>
+    </nav>
+
+    <!--Form Details-->
+    <div class="body">
+        <div id="form">
+        <h2 class="title">Contact us</h2>
+    
+        <form id="form-id" class="form-class" method="post" action="contact-form-process.php">
+            
+            <div class="form-group">
+                <label for="Name" class="label">Your name</label>
+                <div class="input-group">
+                    <input type="text" id="Name" name="Name" class="form-control" required>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Email" class="label">Your email address</label>
+                <div class="input-group">
+                    <input type="email" id="Email" name="Email" class="form-control" required>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <label for="Message" class="label">Your message</label>
+                <div class="input-group">
+                    <textarea id="Message" name="Message" class="form-control" rows="6" maxlength="3000" required></textarea>
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" id="button" class="btn btn-primary btn-lg btn-block">Send Message</button>
+            </div>
+        
+        </form>
+        </div>
+    </div>
+</body>
+</html>

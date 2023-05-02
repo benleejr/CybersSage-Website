@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Benedict Lee, Richard Truong, Nicholas Comeaux, Costel Vakiandro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script>
+        function myFunction()
+        {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+        window.onclick = function(event)
+        {
+            if(!event.taget.matches('.dropbutton'))
+            {
+                var dropdowns = document.getElementByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++)
+                {
+                    var openDropdown = dropdowns[i];
+                    if(openDropdown.classList.contains('show'))
+                    {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /*banner css*/
+        .intro-banner
+        {
+            padding-top: 68px;
+        }
+        .banner-bg
+        {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            height: 599px;
+        }
+        .banner-bg::after {
+            background: rgba(128, 0, 128, 0.763) none repeat scroll 0 0;
+            bottom: 0;
+            content: "";
+            height: 100%;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100%;
+            z-index:-2;
+        }
+        .banner-contain
+        {
+            color: #ffffff;
+            left: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+        
+        .heading h1{
+            color: #ffffff;
+            font-size: 60px;
+            font-weight: 600;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1px;
+            margin-top: 30%;
+        }
+        .sub-heading p
+        {
+            color: #fff;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-top: 50px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        /*BANNNER END*/ 
+
+        body
+        {
+            margin:0px;
+            background-image: url("familyAtArcade.jpg");
+        }
+
+        /*Navbar START*/
+        .navbar-image img
+        {
+            width:20%;
+            height:20%;
+            position: absolute;
+            left:10%;
+            top:0;
+        }
+
+        nav ul
+        {
+            
+            width:100%;
+            list-style-type: none;
+            padding:0;
+            overflow:hidden;
+            background-color: purple;
+            text-align: center;
+        }
+
+        nav ul li
+        {
+            display:inline;
+        }
+        
+        nav ul li a
+        {
+            display:inline-block;
+            padding:20px;
+            background-color: purple;
+            color:white;
+            font-size:24px;
+            text-decoration: none;
+            font-family:fantasy;
+        }
+        nav ul li a:visited
+        {
+            background-color: rgb(241, 108, 241);
+        }
+        nav ul li a:hover
+        {
+            background-color: rgb(185, 4, 185);
+        }
+        nav ul li a:active
+        {
+            background-color:rgb(214, 5, 214);
+        }
+        .dropbutton
+        {
+            padding:16px;
+            font-size: 16px;
+            border:none;
+            cursor: pointer;
+            position: relative;
+            display:inline-block;
+        }
+        .container
+        {
+            position:relative;
+
+        }
+        .dropdown-content
+        {
+            display:none;
+            position:absolute;
+            background-color: aqua;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px red;
+            left:50%;
+            top:calc(100% + 10px);
+            left:45%;
+            
+        }
+        .dropdown-content input
+        {
+            border: 10px 10px 10px 10px solid white;
+            color:black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display:inline-block;
+        }
+        .show{display:block;}
+        /*Nav END*/
+
+    </style>
+
+</head>
+<body>
+    <nav class="dropdown" style="margin:0; padding:0; overflow:hidden; background-color: purple;">
+
+    </nav>
+    <nav>
+        <ul>
+            <div class="container">
+                <button onclick="myFunction()" class="dropbutton" style="display:inline-block; padding:20px; background-color: purple;
+                color:white; font-size:24px; text-decoration: none; font-family:fantasy;">Reserve Now!</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <input type="text" id="reservationHelp" placeholder="Search">
+                    <button type="button" id="locationIdentifier">Use My Location
+                </div>
+            </div>
+            <br>
+            <div class="container-fluid">
+                <a class="navbar-image" href="index.html"><img src="cybersage_transparent.png" alt="cybersagelogo"></a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="contactus.html">Contact Us</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <section class="intro-banner">
+        <div class="banner-bg">
+            <div class="container">
+                <div class="banner-contain">
+                    <div class="heading">  
+                        <h1>Games and Hard Beverages</h1>
+                    </div>
+                    <div class="sub-heading">
+                        <p>$10 ENTRY FOR UNLIMITED PLAY ON 300+ ARCADE GAMES </p>
+                        <p>HAPPY HOUR FROM 10PM TILL CLOSE</p>
+                    </div>  
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+body {
+    margin:0px;
+    background-image: url("familyAtArcade.jpg");
+}
+
+.body {
+    margin:auto;
+    width:40%;
+
+    padding: 30px;
+    padding-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    max-width: 100%;
+    background: rgba(255,255,255,.75);
+    
+
+    font-family: -apple-system, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color:black;
+    text-align: left;
+
+}
+
+ /*Navbar START*/
+ .navbar-image img
+ {
+     width:20%;
+     height:20%;
+     position: absolute;
+     left:10%;
+     top:0;
+ }
+
+ nav ul
+ {     
+     width:100%;
+     list-style-type: none;
+     padding:0;
+     overflow:hidden;
+     background-color: purple;
+     text-align: center;
+ }
+
+ nav ul li
+ {
+     display:inline;
+ }
+ 
+ nav ul li a
+ {
+     display:inline-block;
+     padding:20px;
+     background-color: purple;
+     color:white;
+     font-size:24px;
+     text-decoration: none;
+     font-family:fantasy;
+ }
+ nav ul li a:visited
+ {
+     background-color: rgb(241, 108, 241);
+ }
+ nav ul li a:hover
+ {
+     background-color: rgb(185, 4, 185);
+ }
+ nav ul li a:active
+ {
+     background-color:rgb(214, 5, 214);
+ }
+ .dropbutton
+ {
+     padding:16px;
+     font-size: 16px;
+     border:none;
+     cursor: pointer;
+     position: relative;
+     display:inline-block;
+ }
+ .container
+ {
+     position:relative;
+
+ }
+ .dropdown-content
+ {
+     display:none;
+     position:absolute;
+     background-color: aqua;
+     min-width: 100px;
+     box-shadow: 0px 8px 16px 0px red;
+     left:50%;
+     top:calc(100% + 10px);
+     left:45%;
+     
+ }
+ .dropdown-content input
+ {
+     border: 10px 10px 10px 10px solid white;
+     color:black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display:inline-block;
+ }
+ .show{display:block;}
+ /*Nav END*/
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    width: 100%;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: azure;
+    
+    background-color: darkblue;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    outline: none;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border: 1px solid whitesmoke;
+}
+
+select.form-control[size], select.form-control[multiple] {
+    height: auto;
+}
+
+textarea.form-control {
+    font-family: -apple-system, Arial, sans-serif;
+    color:azure;    
+    height: auto;
+}
+
+label.label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: azure;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: blueviolet;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
